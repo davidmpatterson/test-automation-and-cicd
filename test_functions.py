@@ -83,6 +83,9 @@ def test_wait_for_service(monkeypatch):
         def __init__(self, status_code):
             self.status_code = status_code
 
+        def raise_for_status(self):
+            pass
+
     def mock_get(*args, **kwargs):
         return MockResponse(200)
 
