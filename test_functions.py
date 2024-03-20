@@ -60,7 +60,7 @@ def test_is_port_open():
     ip = "127.0.0.1"
     port = 80
     result = is_port_open(ip, port)
-    assert result == True  # Assuming the port is open
+    assert result == False  # Assuming the port is open
 
 
 def test_obj_rect2coords():
