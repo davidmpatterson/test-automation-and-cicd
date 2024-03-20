@@ -16,17 +16,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.x"
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
 
-      - name: Install dependencies
+      - name: Build Docker image
+        run: docker build -t mytestimage .
+
+      - name: Run tests in Docker container
         run: |
-          pip install pytest
-          pip install numpy
-          pip install opencv-python-headless
-          pip install requests
-
-      - name: Run tests
-        run: pytest
+          docker run mytestimage pytest
