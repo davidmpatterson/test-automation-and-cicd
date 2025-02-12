@@ -1,6 +1,7 @@
 # Test Automation Engineer
 
 More testing...
+Adding 'uv' to the mix...
 
 This test aims to demonstrate your abilities to write and execute a simple testing framework under the GitHub CI/CD runners. The included repository has a single Python file with several functions inside that require basic tests. You can use any framework you are familiar with to write tests for these functions.
 
